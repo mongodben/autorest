@@ -6,13 +6,13 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "AutoRest Documentation",
+  tagline: "Generate client libraries for RESTful APIs",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.ico",
+  favicon: "img/logo.png",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -51,14 +51,14 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Autorest",
+        title: "AutoRest",
         logo: {
-          alt: "My Site Logo",
-          src: "img/logo.svg",
+          alt: "AutoRest Logo",
+          src: "img/logo.png",
         },
         items: [
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/Azure/autorest",
             label: "GitHub",
             position: "right",
           },
@@ -71,43 +71,37 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "AutoRest Documentation",
+                to: "/",
+              },
+              {
+                label: "Introduction",
+                to: "/introduction",
+              },
+              {
+                label: "Install",
+                to: "/install",
               },
             ],
           },
           {
-            title: "Community",
+            title: "Github",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "Repository",
+                to: "https://github.com/Azure/autorest",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "Submit an Issue",
+                to: "https://github.com/Azure/autorest/issues",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "License (MIT)",
+                to: "https://github.com/Azure/autorest/blob/main/LICENSE",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
