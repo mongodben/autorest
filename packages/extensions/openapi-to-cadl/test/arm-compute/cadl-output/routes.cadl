@@ -1545,7 +1545,7 @@ machine in a VM scale set.
 
       @doc("""
 Expiration duration in minutes for the SAS URIs with a value between 1 to 1440
-minutes. <br><br>NOTE: If not specified, SAS URIs will be generated with a
+minutes. <br/><br/>NOTE: If not specified, SAS URIs will be generated with a
 default expiration duration of 120 minutes.
 """)
       @query
@@ -2060,9 +2060,9 @@ The subscription ID forms part of the URI for every service call.
 
   @doc("""
 Sets the OS state of the virtual machine to generalized. It is recommended to
-sysprep the virtual machine before performing this operation. <br>For Windows,
+sysprep the virtual machine before performing this operation. <br/>For Windows,
 please refer to [Create a managed image of a generalized VM in
-Azure](https://docs.microsoft.com/azure/virtual-machines/windows/capture-image-resource).<br>For
+Azure](https://docs.microsoft.com/azure/virtual-machines/windows/capture-image-resource).<br/>For
 Linux, please refer to [How to create an image of a virtual machine or
 VHD](https://docs.microsoft.com/azure/virtual-machines/linux/capture-image).
 """)
@@ -2349,7 +2349,7 @@ The subscription ID forms part of the URI for every service call.
 
       @doc("""
 Expiration duration in minutes for the SAS URIs with a value between 1 to 1440
-minutes. <br><br>NOTE: If not specified, SAS URIs will be generated with a
+minutes. <br/><br/>NOTE: If not specified, SAS URIs will be generated with a
 default expiration duration of 120 minutes.
 """)
       @query

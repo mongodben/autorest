@@ -90,7 +90,7 @@ Tue, 15 Mar 2022 16:00:38 GMT
 
 - Add support for setting original `operationId` on operation
 - **Update** to the logic for resolving operation requests. Group request by body types instead of content-types to prevent overload issues"
-- Generalize security scheme by allowing AAD Token 
+- Generalize security scheme by allowing AAD Token
 - Added support for special headers: headers automatically handled by the generator
 - Uptake change in typing in openapi library
 
@@ -175,7 +175,7 @@ Mon, 19 Jul 2021 15:15:41 GMT
 - Added support for anonymous security scheme
 - **Added** New option to make Content-Type extensible
 - **Added** Configuration to ignore certain header names from being added to the model parameters lists
-- **Change** Single-value enums are extensible by default and will not generate a constant 
+- **Change** Single-value enums are extensible by default and will not generate a constant
 - Drop support for node 10
 - **Perf** Flattener major performance improvement for large specs
 
@@ -224,7 +224,7 @@ Mon, 19 Apr 2021 21:06:54 GMT
 ### Patches
 
 - **Fix** Enum defined just with allOf of other enum
-- **Typo** Ambigious -> Ambiguous 
+- **Typo** Ambigious -> Ambiguous
 
 ## 4.18.3
 Tue, 13 Apr 2021 21:32:54 GMT
@@ -385,7 +385,7 @@ Tue, 26 Jan 2021 21:36:02 GMT
 ### Patches
 
 - add additional checks for empty names, collisions
-- fix errant processing on APString => Apstring 
+- fix errant processing on APString => Apstring
 - x-ms-client-name fixes on parameters
 - added setting for `preserve-uppercase-max-length` to preserve uppercase words up to a certain length.
 
@@ -395,15 +395,15 @@ Tue, 26 Jan 2021 21:36:02 GMT
 
 - static linking libraries for stability
 - processed all names in namer, styles can be set in config (see below):
-- support overrides in namer 
+- support overrides in namer
 - static linked dependency
 
 ## 4.4.x
 
 ### Patches
 
-- parameter grouping 
-- some namer changes 
+- parameter grouping
+- some namer changes
 
 ## 4.3.x
 
@@ -415,18 +415,18 @@ Tue, 26 Jan 2021 21:36:02 GMT
 - filter out 'x-ms-original' from extensions
 - add serializedName for host parameters
 - make sure reused global parameter is added to method too
-- processed values in constants/enums a bit better, support AnySchema for no type/format 
+- processed values in constants/enums a bit better, support AnySchema for no type/format
 - support server variable parameters as method unless they have x-ms-parameter-location
 
 ## 4.2.75
 
 ### Patches
 
-- add `style` to parameters to support collection format 
-- `potential-breaking-change` Include common paramters from oai/path #68 (requires fix from autorest-core 3.0.6160+ ) 
+- add `style` to parameters to support collection format
+- `potential-breaking-change` Include common paramters from oai/path #68 (requires fix from autorest-core 3.0.6160+ )
 - propogate extensions from server parameters (ie, x-ms-skip-url-encoding) #61
-- `potential-breaking-change` make operation groups case insensitive. #59 
-- `potential-breaking-change` sealedChoice/Choice selection was backwards ( was creating a sealedchoice schema for modelAsString:true and vice versa) #62 
+- `potential-breaking-change` make operation groups case insensitive. #59
+- `potential-breaking-change` sealedChoice/Choice selection was backwards ( was creating a sealedchoice schema for modelAsString:true and vice versa) #62
 - `potential-breaking-change` drop constant schema from response, use constantschema's valueType instead. #63
 - `potential-breaking-change` fix body parameter marked as required when not marked so in spec. #64
 
@@ -441,24 +441,24 @@ Tue, 26 Jan 2021 21:36:02 GMT
 ### Patches
 
 - version bump, change your configuration to specify version `~4.1.0` or greater
-  
-  ``` 
-  use-extension:
-    "@autorest/modelerfour" : "~4.1.0" 
-  ```
-  - each Http operation (via `.protocol.http`) will now have a separate `path` and `uri` properties. 
-  <br>Both are still templates, and will have parameters. 
-  <br>The parameters for the `uri` property will have `in` set to `ParameterLocation.Uri`
-  <br>The parameters for the `path` property will continue to have `in` set to `ParameterLocation.Path`
 
-  
+  ```
+  use-extension:
+    "@autorest/modelerfour" : "~4.1.0"
+  ```
+  - each Http operation (via `.protocol.http`) will now have a separate `path` and `uri` properties.
+  <br/>Both are still templates, and will have parameters.
+  <br/>The parameters for the `uri` property will have `in` set to `ParameterLocation.Uri`
+  <br/>The parameters for the `path` property will continue to have `in` set to `ParameterLocation.Path`
+
+
   - autorest-core recently added an option to aggressively deduplicate inline models (ie, ones without a name)
   and modeler-four based generator will have that enabled by default. (ie `deduplicate-inline-models: true`)
-  <br>This may increase deduplication time on extremely large openapi models.
+  <br/>This may increase deduplication time on extremely large openapi models.
 
   - this package contains the initial code for the flattener plugin, however it is not yet enabled.
 
   - updated `@azure-tools/codemodel` package to `3.0.241`:
-  <br>`uri` (required) was added to `HttpRequest`
-  <br>`flattenedNames` (optional) was added to `Property` (in anticipation of supporting flattening)
+  <br/>`uri` (required) was added to `HttpRequest`
+  <br/>`flattenedNames` (optional) was added to `Property` (in anticipation of supporting flattening)
 

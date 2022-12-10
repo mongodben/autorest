@@ -1,4 +1,4 @@
-# <img align="center" src="./docs/images/logo.png"> AutoRest
+# AutoRest
 
 The **AutoRest** tool generates client libraries for accessing RESTful web services. Input to _AutoRest_ is a spec that describes the REST API using the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) format.
 
