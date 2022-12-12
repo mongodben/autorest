@@ -8,7 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "AutoRest Documentation",
   tagline: "Generate client libraries for RESTful APIs",
-  url: "https://your-docusaurus-test-site.com",
+  // TODO: add whatever URL
+  url: "https://example.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -16,8 +17,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "Azure", // Usually your GitHub org/user name.
+  projectName: "autorest", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -37,7 +38,7 @@ const config = {
           routeBasePath: "/",
           // TODO: Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/Azure/autorest/tree/main/docs-site",
         },
         blog: false,
         theme: {
